@@ -1,0 +1,189 @@
+/* Custom CSS for additional styling */
+body {
+  scroll-behavior: smooth;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00f5a0, #00d9f5, #00a1f5, #e1f500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section {
+  min-height: 35vh;
+  padding-top: 80px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.fade-in.visible:nth-child(odd) {
+  transition-delay: 0.1s;
+}
+
+.fade-in.visible:nth-child(even) {
+  transition-delay: 0.3s;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 245, 160, 0.25);
+  border-color: rgba(0, 245, 160, 0.5);
+}
+
+.contact-input {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #00f5a0;
+  top: 10%;
+  left: 10%;
+  animation: floatShape 15s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background: #00d9f5;
+  bottom: 10%;
+  right: 10%;
+  animation: floatShape 18s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  background: #00a1f5;
+  top: 50%;
+  left: 30%;
+  animation: floatShape 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatShape {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -30px);
+  }
+  50% {
+    transform: translate(30px, 40px);
+  }
+  75% {
+    transform: translate(-40px, 20px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media all and (max-width: 767px) {
+  .shape-1 {
+    width: 100px;
+    height: 100px;
+    background: #00f5a0;
+    top: 10%;
+    left: 30%;
+    animation: floatShape 15s ease-in-out infinite;
+  }
+
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+    background: #00d9f5;
+    bottom: 0%;
+    right: 50%;
+    animation: floatShape 18s ease-in-out infinite reverse;
+  }
+
+  .shape-3 {
+    width: 150px;
+    height: 250px;
+    background: #00a1f5;
+    top: 30%;
+    left: 15%;
+    animation: floatShape 12s ease-in-out infinite alternate;
+  }
+}

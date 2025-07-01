@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon Link -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Portfolio V1/image/favicon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Document Text -->
+    <title>Portfolio</title>
+
+    <!-- Tailwind CSS Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Floating background shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 bg-opacity-80 backdrop-filter backdrop-blur-lg border-b border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <span class="text-2xl font-bold gradient-text"
+                >Catalin Pirvulescu</span
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#projects"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Projects</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Home</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Projects</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="section flex items-center justify-center relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              Hi, I'm <span class="gradient-text">Catalin</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300">
+              Creative <span class="gradient-text">Developer</span>
+            </h2>
+            <p class="text-lg text-gray-400 mb-8 max-w-lg">
+              I build beautiful, functional digital experiences that make an
+              impact. Let's create something amazing together.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#projects"
+                class="px-6 py-3 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg font-medium hover:opacity-90 transition duration-300 transform hover:scale-105"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                class="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center fade-in">
+            <div
+              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden floating"
+            >
+              <img
+                src="./image/profile-imge.jpg"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="section py-20 bg-gradient-to-b from-gray-900 to-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            My <span class="gradient-text">Projects</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Here are some of my recent works that showcase my skills and
+            creativity.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in mx-10"
+      >
+        <!-- Project 1 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-blue-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <img
+              src="../Portfolio V1//image/Coffe Main.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Coffee Cup - Website</h3>
+          <p class="text-gray-400 mb-4">
+            A full-featured online store with payment integration (only
+            frontend) and inventory management.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-xs"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-xs"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-pink-900 bg-opacity-50 text-pink-300 rounded-full text-xs"
+              >JavaScript</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-xs"
+              >Firebase</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="https://github.com/Elyticus/Coffee-Shop"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Code <i class="fas ml-2"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://creamy-cup.netlify.app/"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-purple-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <img
+              src="../Portfolio V1/image/Password-Generator Main.png"
+              alt="Project 2"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Password Generator - App</h3>
+          <p class="text-gray-400 mb-4">
+            Generate two strong and unique passwords for any account. This can
+            keep you safe!
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-xs"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-xs"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-xs"
+              >JavaScript</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="https://github.com/Elyticus/Password-Generator-Scrimba"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Project <i class="fas ml-2"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://password-generator-scrimba-m3.netlify.app/"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-pink-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <img
+              src="../Portfolio V1/image/Advice-Generator Main.png"
+              alt="Project 3"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Quote Generator - App</h3>
+          <p class="text-gray-400 mb-4">
+            Available in two modes (Dark/Light) and will generate random quotes
+            based on an API.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-full text-xs"
+              >HTML</span
+            >
+            <span
+              class="px-3 py-1 bg-indigo-900 bg-opacity-50 text-indigo-300 rounded-full text-xs"
+              >CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-teal-900 bg-opacity-50 text-teal-300 rounded-full text-xs"
+              >React</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="https://github.com/Elyticus/Quote-Generator-App"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Project <i class="fas ml-2"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://advice-generator-app-fendm.netlify.app/"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-yellow-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <!-- <img
+              src="#"
+              alt="Project 4"
+              class="w-full h-48 object-cover rounded-lg"
+            /> -->
+            <i class="fas fa-laptop-code fa-3x text-gray-500"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Coming Soon</h3>
+          <p class="text-gray-400 mb-4">
+            <!-- Description Here -->
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-indigo-900 bg-opacity-50 text-indigo-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-teal-900 bg-opacity-50 text-teal-300 rounded-full text-xs"
+              >#</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Project <i class="fas ml-2"></i>
+          </a>
+
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+        <!-- Project 5 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-green-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <!-- <img
+              src="#"
+              alt="Project 5"
+              class="w-full h-48 object-cover rounded-lg"
+            /> -->
+            <i class="fas fa-laptop-code fa-3x text-gray-500"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Coming Soon</h3>
+          <p class="text-gray-400 mb-4">
+            <!-- Description Here -->
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-indigo-900 bg-opacity-50 text-indigo-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-teal-900 bg-opacity-50 text-teal-300 rounded-full text-xs"
+              >#</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Project <i class="fas ml-2"></i>
+          </a>
+
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Project 6 -->
+        <div
+          class="project-card rounded-xl p-6 hover:border-orange-500 transition duration-300"
+        >
+          <div class="mb-4 overflow-hidden rounded-lg">
+            <!-- <img
+              src="#"
+              alt="Project 6"
+              class="w-full h-48 object-cover rounded-lg"
+            /> -->
+            <i class="fas fa-laptop-code fa-3x text-gray-500"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Coming Soon</h3>
+          <p class="text-gray-400 mb-4">
+            <!-- Description Here -->
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-indigo-900 bg-opacity-50 text-indigo-300 rounded-full text-xs"
+              >#</span
+            >
+            <span
+              class="px-3 py-1 bg-teal-900 bg-opacity-50 text-teal-300 rounded-full text-xs"
+              >#</span
+            >
+          </div>
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            View Project <i class="fas ml-2"></i>
+          </a>
+
+          <a
+            target="_blank"
+            href="#"
+            class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+          >
+            Live Preview <i class="fas ml-2"></i>
+          </a>
+        </div>
+
+        <!-- <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-gray-800 transition duration-300"
+          >
+            View All Projects <i class="fas fa-chevron-right ml-2"></i>
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in">
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl opacity-20 blur"
+              ></div>
+              <div class="relative bg-gray-800 rounded-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="Working"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              About <span class="gradient-text">Me</span>
+            </h2>
+            <p class="text-gray-400 mb-6">
+              I graduated IT School and completed the Scrimba Front End
+              Developer Career Path. I am a self-taught learner with a passion
+              for pushing the boundaries of the web. Digital art captivates me,
+              and I aspire to excel in web development and find the soft spot of
+              technology.
+            </p>
+            <p class="text-gray-400 mb-6">
+              I specialize in modern web technologies and love working on
+              projects that challenge me to learn and grow. When I'm not coding,
+              you can find me reading or experimenting with new recipes in the
+              kitchen.
+            </p>
+
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">
+                My <span class="gradient-text">Skills</span>
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="../Portfolio V1/image/html5-original.svg"
+                      alt="HTML logo"
+                    />
+                  </div>
+                  <span>HTML</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="../Portfolio V1/image/css3-original.svg"
+                      alt="CSS Logo"
+                    />
+                  </div>
+                  <span>CSS</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="../Portfolio V1/image/javascript-original.svg"
+                      alt="JavaScript Logo"
+                    />
+                  </div>
+                  <span>JavaScript</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="./image/react-original.svg"
+                      alt="React Logo"
+                    />
+                  </div>
+                  <span>React</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="./image/bootstrap-original.svg"
+                      alt="Bootstrap Logo"
+                    />
+                  </div>
+                  <span>Bootstrap</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="./image/firebase-plain.svg"
+                      alt="Firebase Logo"
+                    />
+                  </div>
+                  <span>Firebase</span>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center mr-3">
+                    <img
+                      class="fab w-7"
+                      src="./image/photoshop-plain.svg"
+                      alt="Photoshop Logo"
+                    />
+                  </div>
+                  <span>Photoshop</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1EsvbQk3cAC-ignfdXRfHZFBoemzB-Frc/view?usp=sharing"
+                class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition duration-300"
+              >
+                Download Resume <i class="fas fa-download ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="section bg-gradient-to-b from-gray-800 to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <div class="floating-shape shape-1"></div>
+          <div class="floating-shape shape-3"></div>
+
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span class="gradient-text">Touch</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you!
+          </p>
+        </div>
+
+        <div class="contact-info bg-gray-600 rounded-lg max-w-3xl mx-auto m-10">
+          <!-- Moved bg and added rounded -->
+          <p class="text-white-400 opacity-80 py-5 px-2 text-center">
+            Send me an email at:
+            <span class="gradient-text font-bold"
+              >pirvulescu.catalin0409@gmail.com</span
+            >
+            or call me directly at:
+            <span class="gradient-text font-bold">+40 721 906 855</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <span class="text-2xl font-bold gradient-text">Portfolio</span>
+          </div>
+          <div class="flex space-x-6 mb-4 md:mb-0">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/catalinclaudiu_/"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://github.com/Elyticus"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/catalin-pirvulescu/"
+              class="text-gray-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+          </div>
+          <div class="text-gray-500 text-sm">
+            &copy; 2025 Designed and coded with
+            <span class="gradient-text">♥</span>. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
